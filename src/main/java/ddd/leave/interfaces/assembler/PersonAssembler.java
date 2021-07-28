@@ -21,6 +21,13 @@ public class PersonAssembler {
         return dto;
     }
 
+    /**
+     * 转Do  Data Object ? 为什么进入领域层就开始转 数据接触对象？
+     *  其实是 Domain Object，这是个 实体对象
+     * @param dto
+     * @return
+     * @throws ParseException
+     */
     public static Person toDO(PersonDTO dto) throws ParseException {
         Person person = new Person();
         person.setPersonId(dto.getPersonId());

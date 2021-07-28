@@ -19,10 +19,15 @@ public class PersonApi {
     @Autowired
     PersonApplicationService personApplicationService;
 
+    /**
+     * 创建 人？
+     * @param personDTO
+     * @return
+     */
     @PostMapping
     public Response create(PersonDTO personDTO) {
         try {
-            personApplicationService.create(PersonAssembler.toDO(personDTO));
+            personApplicationService.create( PersonAssembler.toDO( personDTO));
             return Response.ok();
         } catch (ParseException e) {
             log.error("", e);

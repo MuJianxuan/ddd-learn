@@ -3,6 +3,9 @@ package ddd.leave.domain.rule.entity;
 import ddd.leave.domain.leave.entity.Leave;
 import lombok.Data;
 
+/**
+ * 实体对象和值对象的区别
+ */
 @Data
 public class ApprovalRule {
 
