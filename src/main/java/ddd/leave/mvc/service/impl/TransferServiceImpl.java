@@ -1,5 +1,7 @@
 package ddd.leave.mvc.service.impl;
 
+import ddd.leave.mvc.common.DailyLimitExceededException;
+import ddd.leave.mvc.common.InsufficientFundsException;
 import ddd.leave.mvc.common.InvalidCurrencyException;
 import ddd.leave.mvc.common.Result;
 import ddd.leave.mvc.entity.AccountDO;
@@ -25,7 +27,8 @@ public class TransferServiceImpl implements TransferService {
     private YahooForexService yahooForex;
 
     /**
-     * 1、从MySql数据库中找到转出和转入的账户，选择用 MyBatis 的 mapper 实现 DAO；2、从 Yahoo（或其他渠道）提供的汇率服务获取转账的汇率信息（底层是 http 开放接口）；
+     * 1、从MySql数据库中找到转出和转入的账户，选择用 MyBatis 的 mapper 实现 DAO；
+     * 2、从 Yahoo（或其他渠道）提供的汇率服务获取转账的汇率信息（底层是 http 开放接口）；
      * 3、计算需要转出的金额，确保账户有足够余额，并且没超出每日转账上限；
      * 4、实现转入和转出操作，扣除手续费，保存数据库；
      * 5、发送 Kafka 审计消息，以便审计和对账用；
@@ -52,6 +55,7 @@ public class TransferServiceImpl implements TransferService {
         // exchange rate = 1 source currency = X target currency
         BigDecimal exchangeRate = BigDecimal.ONE;
         if (sourceAccountDO.getCurrency().equals(targetCurrency)) {
+            // targetCurrency = CNY
             exchangeRate = yahooForex.getExchangeRate( sourceAccountDO.getCurrency(), targetCurrency);
         }
         BigDecimal sourceAmount = targetAmount.divide( exchangeRate, RoundingMode.DOWN);
