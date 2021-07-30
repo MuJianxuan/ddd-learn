@@ -1,4 +1,4 @@
-package ddd.leave.interfaces.facade;
+package ddd.leave.interfaces.api;
 
 import ddd.leave.application.service.LeaveApplicationService;
 import ddd.leave.common.api.Response;

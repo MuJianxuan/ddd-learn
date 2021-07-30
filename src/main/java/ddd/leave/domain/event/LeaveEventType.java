@@ -1,4 +1,4 @@
-package ddd.leave.domain.leave.event;
+package ddd.leave.domain.event;
 
 public enum  LeaveEventType {
     CREATE_EVENT,

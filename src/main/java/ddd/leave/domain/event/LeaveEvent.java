@@ -1,6 +1,7 @@
-package ddd.leave.domain.leave.event;
+package ddd.leave.domain.event;
 
 import com.alibaba.fastjson.JSON;
+import ddd.leave.common.event.DomainEvent;
 import ddd.leave.domain.entity.Leave;
 import lombok.Data;
 

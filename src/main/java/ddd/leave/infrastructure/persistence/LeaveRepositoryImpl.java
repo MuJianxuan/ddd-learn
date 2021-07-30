@@ -1,6 +1,6 @@
-package ddd.leave.domain.leave.repository.persistence;
+package ddd.leave.infrastructure.persistence;
 
-import ddd.leave.domain.leave.repository.facade.LeaveRepositoryInterface;
+import ddd.leave.infrastructure.facade.LeaveRepositoryInterface;
 import ddd.leave.infrastructure.mapper.ApprovalInfoDao;
 import ddd.leave.infrastructure.mapper.LeaveDao;
 import ddd.leave.infrastructure.mapper.LeaveEventDao;

@@ -1,7 +1,7 @@
 package ddd.leave.domain.service;
 
 import ddd.leave.domain.entity.Person;
-import ddd.leave.domain.person.repository.facade.PersonRepository;
+import ddd.leave.infrastructure.facade.PersonRepository;
 import ddd.leave.infrastructure.po.PersonPO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

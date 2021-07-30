@@ -1,4 +1,4 @@
-package ddd.leave.domain.person.repository.facade;
+package ddd.leave.infrastructure.facade;
 
 import ddd.leave.infrastructure.po.PersonPO;
 

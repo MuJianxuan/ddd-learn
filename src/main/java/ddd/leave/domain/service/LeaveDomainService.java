@@ -1,13 +1,13 @@
 package ddd.leave.domain.service;
 
+import ddd.leave.common.event.EventPublisher;
 import ddd.leave.domain.entity.Leave;
 import ddd.leave.domain.valueobject.ApprovalType;
 import ddd.leave.domain.valueobject.Approver;
-import ddd.leave.domain.leave.event.LeaveEvent;
-import ddd.leave.domain.leave.event.LeaveEventType;
-import ddd.leave.domain.leave.repository.facade.LeaveRepositoryInterface;
+import ddd.leave.domain.event.LeaveEvent;
+import ddd.leave.domain.event.LeaveEventType;
+import ddd.leave.infrastructure.facade.LeaveRepositoryInterface;
 import ddd.leave.infrastructure.po.LeavePO;
-import ddd.leave.common.event.EventPublisher;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,7 +27,7 @@ public class LeaveDomainService {
     @Autowired
     LeaveFactory leaveFactory;
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void createLeave(Leave leave, int leaderMaxLevel, Approver approver) {
         leave.setLeaderMaxLevel(leaderMaxLevel);
         leave.setApprover(approver);
@@ -38,7 +38,7 @@ public class LeaveDomainService {
         eventPublisher.publish(event);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void updateLeaveInfo(Leave leave) {
         LeavePO po = leaveRepositoryInterface.findById(leave.getId());
         if (null == po) {
@@ -47,7 +47,7 @@ public class LeaveDomainService {
         leaveRepositoryInterface.save(leaveFactory.createLeavePO(leave));
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void submitApproval(Leave leave, Approver approver) {
         LeaveEvent event;
         if ( ApprovalType.REJECT == leave.getCurrentApprovalInfo().getApprovalType()) {

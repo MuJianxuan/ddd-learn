@@ -1,6 +1,6 @@
 package ddd.leave.infrastructure.po;
 
-import ddd.leave.domain.leave.event.LeaveEventType;
+import ddd.leave.domain.event.LeaveEventType;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 

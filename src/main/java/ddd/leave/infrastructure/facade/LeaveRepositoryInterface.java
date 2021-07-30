@@ -1,4 +1,4 @@
-package ddd.leave.domain.leave.repository.facade;
+package ddd.leave.infrastructure.facade;
 
 import ddd.leave.infrastructure.po.LeaveEventPO;
 import ddd.leave.infrastructure.po.LeavePO;

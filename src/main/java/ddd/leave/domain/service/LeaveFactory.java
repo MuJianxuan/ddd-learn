@@ -5,7 +5,7 @@ import ddd.leave.domain.entity.ApprovalInfo;
 import ddd.leave.domain.entity.Leave;
 import ddd.leave.domain.valueobject.Applicant;
 import ddd.leave.domain.valueobject.Approver;
-import ddd.leave.domain.leave.event.LeaveEvent;
+import ddd.leave.domain.event.LeaveEvent;
 import ddd.leave.infrastructure.po.ApprovalInfoPO;
 import ddd.leave.infrastructure.po.LeaveEventPO;
 import ddd.leave.infrastructure.po.LeavePO;
