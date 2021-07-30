@@ -1,9 +1,8 @@
 package ddd.leave.interfaces.facade;
 
 import ddd.leave.application.service.LeaveApplicationService;
-import ddd.leave.domain.leave.entity.Leave;
-import ddd.leave.domain.person.entity.Person;
-import ddd.leave.infrastructure.common.api.Response;
+import ddd.leave.common.api.Response;
+import ddd.leave.domain.entity.Leave;
 import ddd.leave.interfaces.assembler.LeaveAssembler;
 import ddd.leave.interfaces.dto.LeaveDTO;
 import lombok.extern.slf4j.Slf4j;

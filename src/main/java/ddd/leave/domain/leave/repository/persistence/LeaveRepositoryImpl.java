@@ -1,12 +1,12 @@
 package ddd.leave.domain.leave.repository.persistence;
 
 import ddd.leave.domain.leave.repository.facade.LeaveRepositoryInterface;
-import ddd.leave.domain.leave.repository.mapper.ApprovalInfoDao;
-import ddd.leave.domain.leave.repository.mapper.LeaveDao;
-import ddd.leave.domain.leave.repository.mapper.LeaveEventDao;
-import ddd.leave.domain.leave.repository.po.ApprovalInfoPO;
-import ddd.leave.domain.leave.repository.po.LeaveEventPO;
-import ddd.leave.domain.leave.repository.po.LeavePO;
+import ddd.leave.infrastructure.mapper.ApprovalInfoDao;
+import ddd.leave.infrastructure.mapper.LeaveDao;
+import ddd.leave.infrastructure.mapper.LeaveEventDao;
+import ddd.leave.infrastructure.po.ApprovalInfoPO;
+import ddd.leave.infrastructure.po.LeaveEventPO;
+import ddd.leave.infrastructure.po.LeavePO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -29,7 +29,7 @@ public class LeaveRepositoryImpl implements LeaveRepositoryInterface {
         //persist leave entity
         leaveDao.save(leavePO);
        //set leave_id for approvalInfoPO after save leavePO
-        leavePO.getHistoryApprovalInfoPOList().stream().forEach(approvalInfoPO -> approvalInfoPO.setLeaveId(leavePO.getId()));
+        leavePO.getHistoryApprovalInfoPOList().forEach(approvalInfoPO -> approvalInfoPO.setLeaveId(leavePO.getId()));
         approvalInfoDao.saveAll(leavePO.getHistoryApprovalInfoPOList());
     }
 
@@ -46,7 +46,7 @@ public class LeaveRepositoryImpl implements LeaveRepositoryInterface {
     @Override
     public List<LeavePO> queryByApplicantId(String applicantId) {
         List<LeavePO> leavePOList = leaveDao.queryByApplicantId(applicantId);
-        leavePOList.stream()
+        leavePOList
                 .forEach(leavePO -> {
                     List<ApprovalInfoPO> approvalInfoPOList = approvalInfoDao.queryByLeaveId(leavePO.getId());
                     leavePO.setHistoryApprovalInfoPOList(approvalInfoPOList);
@@ -57,7 +57,7 @@ public class LeaveRepositoryImpl implements LeaveRepositoryInterface {
     @Override
     public List<LeavePO> queryByApproverId(String approverId) {
         List<LeavePO> leavePOList = leaveDao.queryByApproverId(approverId);
-        leavePOList.stream()
+        leavePOList
                 .forEach(leavePO -> {
                     List<ApprovalInfoPO> approvalInfoPOList = approvalInfoDao.queryByLeaveId(leavePO.getId());
                     leavePO.setHistoryApprovalInfoPOList(approvalInfoPOList);

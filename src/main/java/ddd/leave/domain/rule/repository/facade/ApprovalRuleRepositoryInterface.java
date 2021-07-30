@@ -1,6 +1,6 @@
 package ddd.leave.domain.rule.repository.facade;
 
-import ddd.leave.domain.rule.entity.ApprovalRule;
+import ddd.leave.domain.entity.ApprovalRule;
 
 public interface ApprovalRuleRepositoryInterface {
 

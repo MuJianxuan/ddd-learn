@@ -1,7 +1,7 @@
 package ddd.leave.application.service;
 
-import ddd.leave.domain.person.entity.Person;
-import ddd.leave.domain.person.service.PersonDomainService;
+import ddd.leave.domain.entity.Person;
+import ddd.leave.domain.service.PersonDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

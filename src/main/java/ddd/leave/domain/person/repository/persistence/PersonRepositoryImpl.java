@@ -1,12 +1,10 @@
 package ddd.leave.domain.person.repository.persistence;
 
-import ddd.leave.domain.person.repository.po.PersonPO;
+import ddd.leave.infrastructure.po.PersonPO;
 import ddd.leave.domain.person.repository.facade.PersonRepository;
-import ddd.leave.domain.person.repository.mapper.PersonDao;
+import ddd.leave.infrastructure.mapper.PersonDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public class PersonRepositoryImpl implements PersonRepository {

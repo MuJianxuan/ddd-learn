@@ -2,6 +2,7 @@ package ddd.leave.mvc.controller;
 
 import ddd.leave.mvc.common.Result;
 import ddd.leave.mvc.service.TransferService;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ public class TransferController {
 
     private TransferService transferService;
 
+    @PostMapping
     public Result<Boolean> transfer(String targetAccountNumber, BigDecimal amount, HttpSession session) {
         Long userId = (Long) session.getAttribute("userId");
         return transferService.transfer(userId, targetAccountNumber, amount, "CNY");

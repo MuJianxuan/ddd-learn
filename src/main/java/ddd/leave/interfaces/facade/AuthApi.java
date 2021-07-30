@@ -1,7 +1,7 @@
 package ddd.leave.interfaces.facade;
 
 import ddd.leave.application.service.LoginApplicationService;
-import ddd.leave.infrastructure.common.api.Response;
+import ddd.leave.common.api.Response;
 import ddd.leave.interfaces.assembler.PersonAssembler;
 import ddd.leave.interfaces.dto.PersonDTO;
 import lombok.extern.slf4j.Slf4j;

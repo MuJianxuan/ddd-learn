@@ -1,8 +1,8 @@
 package ddd.leave.interfaces.facade;
 
 import ddd.leave.application.service.PersonApplicationService;
-import ddd.leave.domain.person.entity.Person;
-import ddd.leave.infrastructure.common.api.Response;
+import ddd.leave.domain.entity.Person;
+import ddd.leave.common.api.Response;
 import ddd.leave.interfaces.assembler.PersonAssembler;
 import ddd.leave.interfaces.dto.PersonDTO;
 import lombok.extern.slf4j.Slf4j;

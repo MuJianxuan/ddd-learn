@@ -1,6 +1,6 @@
 package ddd.leave.interfaces.assembler;
 
-import ddd.leave.domain.leave.entity.valueobject.Approver;
+import ddd.leave.domain.valueobject.Approver;
 import ddd.leave.interfaces.dto.ApproverDTO;
 
 public class ApproverAssembler {

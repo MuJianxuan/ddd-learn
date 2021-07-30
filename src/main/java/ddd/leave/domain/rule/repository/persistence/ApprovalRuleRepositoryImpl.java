@@ -1,8 +1,8 @@
 package ddd.leave.domain.rule.repository.persistence;
 
-import ddd.leave.domain.rule.entity.ApprovalRule;
+import ddd.leave.domain.entity.ApprovalRule;
 import ddd.leave.domain.rule.repository.facade.ApprovalRuleRepositoryInterface;
-import ddd.leave.domain.rule.repository.mapper.ApprovalRuleDao;
+import ddd.leave.infrastructure.mapper.ApprovalRuleDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

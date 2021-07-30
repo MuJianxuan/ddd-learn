@@ -1,13 +1,11 @@
 package ddd.leave.application.service;
 
-import ddd.leave.domain.leave.entity.valueobject.Approver;
-import ddd.leave.domain.leave.entity.Leave;
-import ddd.leave.domain.leave.service.LeaveDomainService;
-import ddd.leave.domain.person.entity.Person;
-import ddd.leave.domain.person.repository.po.PersonPO;
-import ddd.leave.domain.person.service.PersonDomainService;
-import ddd.leave.domain.rule.entity.ApprovalRule;
-import ddd.leave.domain.rule.service.ApprovalRuleDomainService;
+import ddd.leave.domain.valueobject.Approver;
+import ddd.leave.domain.entity.Leave;
+import ddd.leave.domain.service.LeaveDomainService;
+import ddd.leave.domain.entity.Person;
+import ddd.leave.domain.service.PersonDomainService;
+import ddd.leave.domain.service.ApprovalRuleDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

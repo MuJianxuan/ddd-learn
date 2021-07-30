@@ -1,6 +1,6 @@
 package ddd.leave.interfaces.assembler;
 
-import ddd.leave.domain.leave.entity.valueobject.Applicant;
+import ddd.leave.domain.valueobject.Applicant;
 import ddd.leave.interfaces.dto.ApplicantDTO;
 
 public class ApplicantAssembler {
