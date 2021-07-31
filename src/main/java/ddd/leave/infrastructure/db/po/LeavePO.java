@@ -1,4 +1,4 @@
-package ddd.leave.infrastructure.po;
+package ddd.leave.infrastructure.db.po;
 
 import ddd.leave.domain.entity.Leave;
 import ddd.leave.domain.valueobject.LeaveType;

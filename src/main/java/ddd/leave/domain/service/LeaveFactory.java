@@ -6,9 +6,9 @@ import ddd.leave.domain.entity.Leave;
 import ddd.leave.domain.valueobject.Applicant;
 import ddd.leave.domain.valueobject.Approver;
 import ddd.leave.domain.event.LeaveEvent;
-import ddd.leave.infrastructure.po.ApprovalInfoPO;
-import ddd.leave.infrastructure.po.LeaveEventPO;
-import ddd.leave.infrastructure.po.LeavePO;
+import ddd.leave.infrastructure.db.po.ApprovalInfoPO;
+import ddd.leave.infrastructure.db.po.LeaveEventPO;
+import ddd.leave.infrastructure.db.po.LeavePO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

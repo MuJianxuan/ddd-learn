@@ -21,7 +21,7 @@ public class TransferApi {
     private TransferApplicationService transferApplicationService;
 
     /**
-     * 转账功能  当前用户 转 amount 的钱到 另外一个账户
+     * 概念描述： 账户转账
      * @param transferDto
      * @param session
      * @return

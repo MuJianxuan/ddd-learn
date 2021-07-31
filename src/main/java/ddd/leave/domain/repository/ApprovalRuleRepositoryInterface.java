@@ -1,4 +1,4 @@
-package ddd.leave.infrastructure.facade;
+package ddd.leave.domain.repository;
 
 import ddd.leave.domain.entity.ApprovalRule;
 

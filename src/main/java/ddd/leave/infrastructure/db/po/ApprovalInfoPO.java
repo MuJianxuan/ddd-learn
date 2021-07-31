@@ -1,4 +1,4 @@
-package ddd.leave.infrastructure.po;
+package ddd.leave.infrastructure.db.po;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;

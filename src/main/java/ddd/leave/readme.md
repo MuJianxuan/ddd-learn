@@ -2,7 +2,7 @@ application: 应用层， 定义业务流程，非常薄的一层，用于编排
 
 common: 公共层
 
-domain： 领域层，包含领域服务、领域值对象、领域实体对象、领域聚合根等。
+domain： 业务领域层，包含领域服务、领域值对象、领域实体对象、领域聚合根等。
 
 infrastructure: 基础设施层 ， 包含Dao，Http，Rpc，Redis，等等远程服务的访问。
 

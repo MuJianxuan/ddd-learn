@@ -1,8 +1,8 @@
 package ddd.leave.domain.service;
 
 import ddd.leave.domain.entity.Person;
-import ddd.leave.infrastructure.facade.PersonRepository;
-import ddd.leave.infrastructure.po.PersonPO;
+import ddd.leave.domain.repository.PersonRepository;
+import ddd.leave.infrastructure.db.po.PersonPO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

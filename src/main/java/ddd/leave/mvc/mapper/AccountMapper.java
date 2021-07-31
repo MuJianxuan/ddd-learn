@@ -19,4 +19,8 @@ public interface AccountMapper {
     }
 
     void update(AccountDO sourceAccountDO);
+
+    void decrAccountMoney(Long id, BigDecimal money);
+
+    void incrAccountMoney(Long id, BigDecimal money);
 }

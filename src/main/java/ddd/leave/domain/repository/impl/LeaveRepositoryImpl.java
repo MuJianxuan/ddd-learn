@@ -1,12 +1,12 @@
-package ddd.leave.infrastructure.persistence;
+package ddd.leave.domain.repository.impl;
 
-import ddd.leave.infrastructure.facade.LeaveRepositoryInterface;
-import ddd.leave.infrastructure.mapper.ApprovalInfoDao;
-import ddd.leave.infrastructure.mapper.LeaveDao;
-import ddd.leave.infrastructure.mapper.LeaveEventDao;
-import ddd.leave.infrastructure.po.ApprovalInfoPO;
-import ddd.leave.infrastructure.po.LeaveEventPO;
-import ddd.leave.infrastructure.po.LeavePO;
+import ddd.leave.domain.repository.LeaveRepositoryInterface;
+import ddd.leave.infrastructure.db.mapper.ApprovalInfoDao;
+import ddd.leave.infrastructure.db.mapper.LeaveDao;
+import ddd.leave.infrastructure.db.mapper.LeaveEventDao;
+import ddd.leave.infrastructure.db.po.ApprovalInfoPO;
+import ddd.leave.infrastructure.db.po.LeaveEventPO;
+import ddd.leave.infrastructure.db.po.LeavePO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

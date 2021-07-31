@@ -1,7 +1,7 @@
-package ddd.leave.infrastructure.facade;
+package ddd.leave.domain.repository;
 
-import ddd.leave.infrastructure.po.LeaveEventPO;
-import ddd.leave.infrastructure.po.LeavePO;
+import ddd.leave.infrastructure.db.po.LeaveEventPO;
+import ddd.leave.infrastructure.db.po.LeavePO;
 
 import java.util.List;
 

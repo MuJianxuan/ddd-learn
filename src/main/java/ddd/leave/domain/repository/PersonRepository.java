@@ -1,6 +1,6 @@
-package ddd.leave.infrastructure.facade;
+package ddd.leave.domain.repository;
 
-import ddd.leave.infrastructure.po.PersonPO;
+import ddd.leave.infrastructure.db.po.PersonPO;
 
 public interface PersonRepository {
 

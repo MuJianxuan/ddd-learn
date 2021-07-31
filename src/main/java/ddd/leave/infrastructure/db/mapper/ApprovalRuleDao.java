@@ -1,7 +1,7 @@
-package ddd.leave.infrastructure.mapper;
+package ddd.leave.infrastructure.db.mapper;
 
 import ddd.leave.domain.entity.ApprovalRule;
-import ddd.leave.infrastructure.po.ApprovalRulePO;
+import ddd.leave.infrastructure.db.po.ApprovalRulePO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

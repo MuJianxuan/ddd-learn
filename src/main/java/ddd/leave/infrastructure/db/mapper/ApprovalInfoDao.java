@@ -1,7 +1,7 @@
-package ddd.leave.infrastructure.mapper;
+package ddd.leave.infrastructure.db.mapper;
 
-import ddd.leave.infrastructure.po.ApprovalInfoPO;
-import ddd.leave.infrastructure.po.LeavePO;
+import ddd.leave.infrastructure.db.po.ApprovalInfoPO;
+import ddd.leave.infrastructure.db.po.LeavePO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

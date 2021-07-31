@@ -1,8 +1,8 @@
-package ddd.leave.infrastructure.persistence;
+package ddd.leave.domain.repository.impl;
 
-import ddd.leave.infrastructure.po.PersonPO;
-import ddd.leave.infrastructure.facade.PersonRepository;
-import ddd.leave.infrastructure.mapper.PersonDao;
+import ddd.leave.domain.repository.PersonRepository;
+import ddd.leave.infrastructure.db.po.PersonPO;
+import ddd.leave.infrastructure.db.mapper.PersonDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

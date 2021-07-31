@@ -36,7 +36,7 @@ public class TransferServiceImpl implements TransferService {
      * @param sourceUserId
      * @param targetAccountNumber
      * @param targetAmount
-     * @param targetCurrency
+     * @param targetCurrency 目标货币
      * @return
      */
     @Override

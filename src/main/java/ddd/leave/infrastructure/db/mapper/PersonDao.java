@@ -1,6 +1,6 @@
-package ddd.leave.infrastructure.mapper;
+package ddd.leave.infrastructure.db.mapper;
 
-import ddd.leave.infrastructure.po.PersonPO;
+import ddd.leave.infrastructure.db.po.PersonPO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

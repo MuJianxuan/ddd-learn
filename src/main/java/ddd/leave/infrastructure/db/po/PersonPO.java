@@ -1,4 +1,4 @@
-package ddd.leave.infrastructure.po;
+package ddd.leave.infrastructure.db.po;
 
 import ddd.leave.domain.valueobject.PersonStatus;
 import ddd.leave.domain.valueobject.PersonType;
