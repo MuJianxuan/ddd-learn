@@ -1,3 +1,5 @@
+ 
+
 application: 应用层， 定义业务流程，非常薄的一层，用于编排业务。
 
 common: 公共层
@@ -15,3 +17,4 @@ interfaces: 接口层，即访问层。
 
 遵循分离领域涉及模型：
 ![image](https://i.loli.net/2021/07/28/ltKk4qpgyQscB2D.png)
+

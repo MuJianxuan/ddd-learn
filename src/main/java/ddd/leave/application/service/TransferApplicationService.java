@@ -40,7 +40,6 @@ public class TransferApplicationService {
         // 转账
         accountDomainService.transfer(userId, targetAccountNumber, targetAmount, targetCurrency);
 
-
         return Result.success( Boolean.TRUE);
     }
 }
